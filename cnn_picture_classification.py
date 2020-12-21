@@ -20,7 +20,6 @@ model.add(layers.MaxPooling2D((2, 2)))
 model.add(layers.Conv2D(64, (3, 3), activation='relu'))
 
 model.add(layers.Flatten())
-model.add(layers.Dense(64 * 9, activation='relu'))
 model.add(layers.Dense(64 * 3, activation='relu'))
 model.add(layers.Dense(64, activation='relu'))
 model.add(layers.Dense(32, activation='relu'))
@@ -46,5 +45,5 @@ plt.legend(loc='lower right')
 plt.show()
 
 test_loss, test_acc = model.evaluate(test_images,  test_labels, verbose=2)
-
+print()
 print(test_acc)
